@@ -1,0 +1,12 @@
+# .gitattributes - tells Git how to treat the line endings of files
+#
+# Windows and Linux end each line of text with different invisible characters
+# ("line endings"): Windows uses two (CRLF), Linux and macOS use one (LF). On
+# Windows, Git may change files to the Windows style when it writes them into
+# the project folder. The hooks write their files (the README tree, the
+# progress pages, the notes) with LF on every computer. This line keeps every
+# text file in LF everywhere too, so a file a hook rewrites never looks
+# changed only because of its line endings. "text=auto" lets Git find out by
+# itself which files are text; pictures and other binary files are not touched.
+# A line starting with "#" is a comment for people only.
+* text=auto eol=lf

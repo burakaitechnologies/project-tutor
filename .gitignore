@@ -1,0 +1,22 @@
+# .gitignore - the list of files that Git must never save
+#
+# Git is the tool that saves versions of this project (each saved version is a
+# "commit") and sends them to GitHub. Git reads this file and ignores every
+# path listed below, so these files are never saved in a commit and never
+# uploaded. A line starting with "#" is a comment: Git skips it.
+
+# Settings for this computer only. It holds a folder path that exists only on
+# this computer.
+.claude/settings.local.json
+
+# Python's cache: when a hook script loads a shared helper file, Python saves a
+# faster copy of it in a "__pycache__" folder. Python makes it again whenever
+# needed, so it is never saved in Git.
+__pycache__/
+
+# Copies of Claude Code's raw session records, made by
+# .claude/hooks/reply-end/backup-raw-transcripts.py. They are very large (tens
+# of megabytes after a few days) and contain everything that was read, so they
+# stay on this computer only. The readable chat files and subagent records are
+# saved in Git instead.
+.claude/agent-memory/main-agent/raw-transcripts/
